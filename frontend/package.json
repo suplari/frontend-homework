@@ -1,10 +1,10 @@
 {
   "name": "suplari",
   "version": "0.0.1",
-  "description": "Suplari web app homework",
+  "description": "homework project",
   "author": "jgerber",
-  "url": "https://suplari.com",
-  "copyright": "Copyright 2016 Suplari Inc. Jeff Gerber",
+  "url": "",
+  "copyright": "",
   "license": "None",
   "angular-cli": {},
   "scripts": {

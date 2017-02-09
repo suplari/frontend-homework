@@ -1,4 +1,4 @@
-Suplari Prototype
+Honework for frontend candidate
 
 # Angular2DevelopmentCLI
 
