@@ -1,0 +1,54 @@
+{
+  "project": {
+    "version": "1.5.10",
+    "name": "core-ui"
+  },
+  "apps": [
+    {
+      "root": "src",
+      "outDir": "dist",
+      "assets": "assets",
+      "index": "index.html",
+      "main": "main.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.json",
+      "prefix": "app",
+      "mobile": false,
+      "styles": [
+        "scss/style.scss",
+        "../vendor/styles/wijmo.css",
+        "../node_modules/ag-grid/dist/styles/ag-grid.css",
+        "../node_modules/ag-grid/dist/styles/theme-fresh.css",
+        "../node_modules/ag-grid/dist/styles/theme-bootstrap.css",
+        "../node_modules/ag-grid/dist/styles/theme-material.css",
+        "../node_modules/font-awesome/css/font-awesome.css"
+      ],
+      "scripts": [
+        "../node_modules/chart.js/dist/Chart.bundle.min.js",
+        "../node_modules/chart.js/dist/Chart.min.js"
+      ],
+      "environments": {
+        "source": "environments/environment.ts",
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    }
+  ],
+  "addons": [    "../node_modules/font-awesome/fonts/*.+(otf|eot|svg|ttf|woff|woff2)"
+],
+  "packages": [],
+  "e2e": {
+    "protractor": {
+      "config": "./protractor.conf.js"
+    }
+  },
+  "test": {
+    "karma": {
+      "config": "./karma.conf.js"
+    }
+  },
+  "defaults": {
+    "styleExt": "scss",
+    "prefixInterfaces": false
+  }
+}
