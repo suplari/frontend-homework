@@ -3,7 +3,7 @@ import { Http, HttpModule, Response, Headers, RequestOptions } from '@angular/ht
 import {Observable} from 'rxjs/Rx';
 import * as crossfilter from 'crossfilter';
 
-import { Supplier, Contract, Product, Invoice, LineItem, LicenseType, MetricSpec, Metric } from '../shared/domain-model';
+import { Supplier, Contract, Product, LicenseType, MetricSpec } from '../shared/domain-model';
 
 
 @Injectable()
@@ -71,11 +71,6 @@ export class SupplierDataService {
   }
 
 
-  public generateMetrics(li: LineItem, d: any) {
-    for(let m of li.product.children) {
-      d[m.name] = ( (m.max - m.min) * Math.random() ) + m.min;
-    }
-  }
 
   public getMetricNames() {
     let r = {};

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SupplierDataService} from '../services/supplier-data.service';
-import {  Invoice, LineItem } from '../shared/domain-model';
 
 declare var require: any;
 
