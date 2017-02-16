@@ -1,6 +1,16 @@
-Honework for frontend candidate
+#Homework for frontend candidate
 
-# Angular2DevelopmentCLI
+Dear candidate,
+you will work on building an editor/editors for our domain model objects. Don't worry about making it perfect, 
+but approach it as you would for a production system. This is an opportunity to do your best work without time 
+constraints and with your favorite tools at your disposal. In order to help you getting started, we
+are providing some of the code. We are looking for component design, your ability to navigate the Angular 
+stack, edge cases, etc.  Bonus points if you can add some charts and graphs to the dashboard page. 
+Instructions about getting the project running are bellow.
+
+Have fun and good luck!
+
+## Angular2DevelopmentCLI
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.11-webpack.8.
 
