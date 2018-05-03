@@ -1,0 +1,47 @@
+<main class="store-container">
+
+    <div class="product-list-container">
+        Product List
+        <ul>
+            <!-- Repeat this product card for each product in the products array -->
+            <li class="product-card">
+
+                <img src="">
+                <div class="product-info">
+                    <div class="name"></div>
+                    <div class="description"></div>
+                    <div class="price"></div>
+                    <button>Add to Cart</button>
+                </div>
+
+            </li>
+        </ul>
+    </div>
+
+    <div class="cart-container">
+        Cart
+
+        <table>
+            <tr>
+                <th class="cell-image"></th>
+                <th class="cell-name">Product</th>
+                <th class="cell-price">Price</th>
+                <th class="cell-remove"></th>
+            </tr>
+            <tr *ngFor="let item of cart; let i = index">
+                <td class="cell-image"><img class="image-thumbnail" src=""></td>
+                <td class="cell-name"></td>
+                <td class="cell-price"></td>
+                <td class="cell-remove"><button>Remove</button></td>
+            </tr>
+        </table>
+
+        <div>Cart is empty.</div>
+
+        Total:
+
+        <button>Clear Cart</button>
+
+    </div>
+
+</main>

@@ -1,0 +1,38 @@
+.store-container {
+    width: 100%;
+    display: flex;
+
+    .product-list-container {
+        width: 500px;
+
+        .product-card {
+            border: 1px solid black;
+            margin-bottom: 5px;
+            display: flex;
+        }
+    }
+
+    .cart-container {
+
+        table {
+            .cell-image {
+                width:32px;
+
+                .image-thumbnail {
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+
+            .cell-name {
+                width: 175px;
+            }
+
+            .cell-price, .cell-remove {
+                width: 75px;
+            }
+
+        }
+    }
+
+}
