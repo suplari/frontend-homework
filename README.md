@@ -5,6 +5,8 @@ This is a simple front-end Angular project where you will build out a basic shop
 
 You will develop on top of the existing barebones JavaScript, HTML, and SCSS structure we have provided.
 
+**Please spend no more than 30 minutes to 1 hour.** The goal is neither perfection nor completion; rather, it is to help Suplari gain a basic sense of your general skills, approach to development, and problem-solving. (do not include reading this as part of that time limit!)
+
 ## Guidelines
 1) Much of the basic structure is already there for you to work with. For example, you may need to bind variables or functions to the template from the TypeScript file.
 2) You are free to add or change parts of the template to make it more your own or fit your development needs (keep the time constraint in mind, however).
