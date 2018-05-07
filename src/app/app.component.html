@@ -5,17 +5,17 @@
         <ul>
             <!-- Repeat this product card for each product in the products array -->
             <li class="product-card" *ngFor="let prod of products">
-
-                <img src={{prod.image}}/>
                 <div class="product-info">
-                    <div class="left-section">
-                        <div class="name">{{prod.name}}</div>
-                        <div class="description">{{prod.description}}</div>
-                    </div>
+
+                    <img class="image" src="{{prod.imageUrl}}"/>
                     <div class="right-section">
-                        <div class="price">{{prod.price}}</div>
-                        <button (click)="add(prod)">Add to Cart</button>
+                        <div class="price">${{prod.price}}</div>
+                        <button class="btn" (click)="add(prod)">Add to Cart</button>
                     </div>
+
+                    <div class="name">{{prod.name}}</div>
+                    <div class="description">{{prod.description}}</div>
+                    
                 </div>
 
             </li>
@@ -33,18 +33,21 @@
                 <th class="cell-remove"></th>
             </tr>
             <tr *ngFor="let item of cart; let i = index">
-                <td class="cell-image"><img class="image-thumbnail" src=""></td>
+                <td class="cell-image"><img class="image-thumbnail" src="{{item.imageUrl}}"></td>
                 <td class="cell-name">{{item.name}}</td>
-                <td class="cell-price">{{item.price}}</td>
-                <td class="cell-remove"><button (click)="remove(item)">Remove</button></td>
+                <td class="cell-price">${{item.price}}</td>
+                <td class="cell-remove"><button class="btn" (click)="remove(item)">X</button></td>
             </tr>
         </table>
 
-        <div *ngIf="cartTotal == 0">Cart is empty.</div>
 
-        Total:
+        <div class="cart-summary">
+            <button class="clear-button btn" (click)="clear()">Clear Cart</button>
 
-        <button (click)="clear()">Clear Cart</button>
+            <div *ngIf="cartTotal == 0; else elseBlock">Cart is empty.</div>
+
+            <ng-template #elseBlock><div>Total: ${{cartTotal}}</div></ng-template>
+        </div>
 
     </div>
 

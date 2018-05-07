@@ -1,15 +1,39 @@
+$border-color: #aab7b8;
+$background-gray-blue: #abc;
+$teal: #22959b;
+$money-green: #1ebe7a;
+$heading-gray-navy: #485863;
+$light-red: #f17e8a;
+$red: #ec4758;
+
+.btn {
+    padding: 4px 6px;
+    font-size: 13px;
+    border: 1px solid $border-color;
+    color: white;
+}
+
 .store-container {
     width: 100%;
     display: flex;
     font-family: sans-serif;
 
+    h3 {
+        color: $heading-gray-navy;
+        font-weight: 500;
+    }
+
     .product-list-container {
         min-width: 500px;
         margin-right: 1em;
 
+        h3 {
+            margin-left: 40px;
+        }
         .product-card {
-            border: 1px solid black;
-            margin-bottom: 5px;
+            border-bottom: 2px solid $border-color;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
             display: flex;
 
             .product-info {
@@ -18,13 +42,31 @@
             }
             .right-section { 
                 float: right;
-            }
-            .left-section {
-                float: left;
+                text-align: center;
+
+                .price {
+                    margin-bottom: 5px;
+                    color: $money-green;
+                }
             }
             .description {
                 font-size: 90%;
                 color: lighten(black, 40%);
+            }
+            .image {
+                width: 80px;
+                height: 80px;
+                border-radius: 8px;
+                float: left;
+                margin-right: 10px;
+            }
+            button {
+                background-color: $background-gray-blue;
+
+                &:hover, &:focus {
+                    background-color: lighten($background-gray-blue, 20%);
+                    color: $teal;
+                }
             }
         }
     }
@@ -32,6 +74,9 @@
     .cart-container {
 
         table {
+            th {
+                color: $heading-gray-navy;
+            }
             .cell-image {
                 width:32px;
 
@@ -41,15 +86,51 @@
                 }
             }
 
+
             .cell-name {
                 width: 175px;
+
+            }
+            td.cell-name {
+                font-size: 13px;
+                padding: 4px;
             }
 
             .cell-price, .cell-remove {
                 width: 75px;
+
+                button {
+                    border-radius: 13px;
+                    background-color: $red;
+                    font-size: 9px;
+
+                    &:hover, &:focus {
+                        color: $heading-gray-navy;
+                        background-color: $light-red;
+                    }
+                }
+            }
+            td.cell-price {
+                color: darken($money-green, 15%);
             }
 
+        }
 
+        .cart-summary {
+            border: 1px solid $border-color;
+            div { padding: 8px; }
+        }
+
+        .clear-button {
+            float: right;
+            margin-top: 4px;
+            margin-right: 5px;
+            background-color: $light-red;
+
+            &:hover, &:focus {
+                background-color: lighten($light-red, 20%);
+                color: $heading-gray-navy;
+            }
         }
     }
 

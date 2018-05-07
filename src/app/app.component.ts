@@ -35,21 +35,21 @@ export class AppComponent {
 
     add(item) {
         this.cart.push(item);
-        this.setCartTotal("add");
+        this.setCartTotal("add", item);
     }
 
     remove(item) {
         this.cart.splice(this.cart.indexOf(item), 1);
-        this.setCartTotal("remove");
+        this.setCartTotal("remove", item);
     }
 
-    setCartTotal(action) {
+    setCartTotal(action, item) {
         switch (action) {
             case "add":
-                this.cartTotal += 1;
+                this.cartTotal += item.price;
                 break;
             case "remove":
-                this.cartTotal -= 1;
+                this.cartTotal -= item.price;
                 break;
         }
 
