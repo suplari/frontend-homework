@@ -1,17 +1,21 @@
 <main class="store-container">
 
     <div class="product-list-container">
-        Product List
+        <h3>Product List</h3>
         <ul>
             <!-- Repeat this product card for each product in the products array -->
-            <li class="product-card">
+            <li class="product-card" *ngFor="let prod of products">
 
-                <img src="">
+                <img src={{prod.image}}/>
                 <div class="product-info">
-                    <div class="name"></div>
-                    <div class="description"></div>
-                    <div class="price"></div>
-                    <button>Add to Cart</button>
+                    <div class="left-section">
+                        <div class="name">{{prod.name}}</div>
+                        <div class="description">{{prod.description}}</div>
+                    </div>
+                    <div class="right-section">
+                        <div class="price">{{prod.price}}</div>
+                        <button (click)="add($event)">Add to Cart</button>
+                    </div>
                 </div>
 
             </li>
@@ -19,7 +23,7 @@
     </div>
 
     <div class="cart-container">
-        Cart
+        <h3>Cart</h3>
 
         <table>
             <tr>
@@ -30,17 +34,17 @@
             </tr>
             <tr *ngFor="let item of cart; let i = index">
                 <td class="cell-image"><img class="image-thumbnail" src=""></td>
-                <td class="cell-name"></td>
-                <td class="cell-price"></td>
-                <td class="cell-remove"><button>Remove</button></td>
+                <td class="cell-name">{{item.name}}</td>
+                <td class="cell-price">{{item.price}}</td>
+                <td class="cell-remove"><button (click)="remove($event)">Remove</button></td>
             </tr>
         </table>
 
-        <div>Cart is empty.</div>
+        <div *ngIf="cartTotal == 0">Cart is empty.</div>
 
         Total:
 
-        <button>Clear Cart</button>
+        <button (click)="clear()">Clear Cart</button>
 
     </div>
 

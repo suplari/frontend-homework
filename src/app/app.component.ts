@@ -24,23 +24,39 @@ export class AppComponent {
     generateProductName() {
         /* Randomly generate a name for each product in the products array,
         using one word from each of the three name arrays. Example result: 'Sturdy Metal Widget' */
-
+        var cls = this;
+        this.products.forEach(function(prod) {
+            var adj = cls.productAdjective[Math.floor(Math.random() * cls.productAdjective.length)];
+            var mat = cls.productMaterial[Math.floor(Math.random() * cls.productMaterial.length)];
+            var typ = cls.productType[Math.floor(Math.random() * cls.productType.length)];
+            prod.name =  adj + " " + mat + " " + typ;
+        });
     }
 
-    add() {
-
+    add(event) {
+        this.setCartTotal("add");
+        debugger;
     }
 
     remove() {
-
+        this.setCartTotal("remove");
     }
 
-    setCartTotal() {
+    setCartTotal(action) {
+        switch (action) {
+            case "add":
+                this.cartTotal += 1;
+                break;
+            case "remove":
+                this.cartTotal -= 1;
+                break;
+        }
 
     }
 
     clear() {
-
+        this.cartTotal = 0;
+        this.cart = [];
     }
 
 }
