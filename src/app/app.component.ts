@@ -33,12 +33,13 @@ export class AppComponent {
         });
     }
 
-    add(event) {
+    add(item) {
+        this.cart.push(item);
         this.setCartTotal("add");
-        debugger;
     }
 
-    remove() {
+    remove(item) {
+        this.cart.splice(this.cart.indexOf(item), 1);
         this.setCartTotal("remove");
     }
 

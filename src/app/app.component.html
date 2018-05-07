@@ -14,7 +14,7 @@
                     </div>
                     <div class="right-section">
                         <div class="price">{{prod.price}}</div>
-                        <button (click)="add($event)">Add to Cart</button>
+                        <button (click)="add(prod)">Add to Cart</button>
                     </div>
                 </div>
 
@@ -36,7 +36,7 @@
                 <td class="cell-image"><img class="image-thumbnail" src=""></td>
                 <td class="cell-name">{{item.name}}</td>
                 <td class="cell-price">{{item.price}}</td>
-                <td class="cell-remove"><button (click)="remove($event)">Remove</button></td>
+                <td class="cell-remove"><button (click)="remove(item)">Remove</button></td>
             </tr>
         </table>
 
